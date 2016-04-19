@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://twitter.com/MerrickSapsford"
 
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/MerrickSapsford/MSSTabbedPageViewController.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/MerrickSapsford/MSSKeyboardManager.git", :tag => s.version.to_s }
   s.requires_arc = true
   s.source_files  = "MSSKeyboardManager/Classes", "MSSKeyboardManager/**/*.{h,m}"
   s.frameworks = 'UIKit'
