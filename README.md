@@ -17,10 +17,15 @@ The following protocol methods are then available to the responder:
 
 ```
 - (void)keyboardManager:willShowKeyboardWithUpdate:
+
 - (void)keyboardManager:didShowKeyboardWithUpdate:
+
 - (void)keyboardManager:willHideKeyboardWithUpdate:
+
 - (void)keyboardManager:didHideKeyboardWithUpdate:
+
 - (void)keyboardManager:keyboardWillUpdateFromFrame:isDocked:
+
 - (void)keyboardManager:keyboardDidUpdateToFrame:isDocked:
 ```
 
