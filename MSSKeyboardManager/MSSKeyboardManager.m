@@ -20,6 +20,25 @@
         _animationDuration = [[dictionary objectForKey:UIKeyboardAnimationDurationUserInfoKey]floatValue];
         _animationCurve = [[dictionary objectForKey:UIKeyboardAnimationCurveUserInfoKey]unsignedIntegerValue];
         _isLocal = [[dictionary objectForKey:UIKeyboardIsLocalUserInfoKey]boolValue];
+        
+        UIInterfaceOrientation currentOrientation = [UIApplication sharedApplication].statusBarOrientation;
+        CGSize screenSize = [UIScreen mainScreen].bounds.size;
+        CGFloat screenHeight = UIInterfaceOrientationIsPortrait(currentOrientation) ? screenSize.height : screenSize.width;
+        
+        CGRect frame = CGRectEqualToRect(self.endFrame, CGRectZero) ? self.beginFrame : self.endFrame; // default to end frame
+        CGFloat dockedYOffset = screenHeight - frame.size.height;
+        CGFloat actualYOffset = CGRectGetMinY(frame);
+        
+        if (actualYOffset != screenHeight && (CGRectGetMaxY(frame) <= screenHeight)) { // if keyboard is visible
+            _keyboardVisible = YES;
+            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad && (actualYOffset < dockedYOffset)) { // check if keyboard is docked
+                _keyboardDocked = (dockedYOffset == actualYOffset);
+            } else {
+                _keyboardDocked = YES; // always docked on iPhone
+            }
+        } else { // keyboard not visible
+            _keyboardVisible = NO;
+        }
     }
     return self;
 }
@@ -78,6 +97,24 @@
     }
 }
 
+- (void)keyboardWillChangeFrameNotification:(NSNotification *)notification {
+    MSSKeyboardUpdate *update = [MSSKeyboardUpdate updateWithDictionary:notification.userInfo];
+    if ((update.keyboardVisible && !CGRectEqualToRect(update.beginFrame, CGRectZero)) &&
+        [self.responder respondsToSelector:@selector(keyboardManager:keyboardWillUpdateFromFrame:isDocked:)]) {
+        
+        [self.responder keyboardManager:self keyboardWillUpdateFromFrame:update.beginFrame isDocked:update.keyboardDocked];
+    }
+}
+
+- (void)keyboardDidChangeFrameNotification:(NSNotification *)notification {
+    MSSKeyboardUpdate *update = [MSSKeyboardUpdate updateWithDictionary:notification.userInfo];
+    if ((update.keyboardVisible && !CGRectEqualToRect(update.endFrame, CGRectZero)) &&
+        [self.responder respondsToSelector:@selector(keyboardManager:keyboardDidUpdateToFrame:isDocked:)]) {
+        
+        [self.responder keyboardManager:self keyboardDidUpdateToFrame:update.endFrame isDocked:update.keyboardDocked];
+    }
+}
+
 #pragma mark - Public
 
 - (void)startIgnoringUpdates {
@@ -109,6 +146,12 @@
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(keyboardDidHideNotification:)
                                                 name:UIKeyboardDidHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(keyboardWillChangeFrameNotification:)
+                                                name:UIKeyboardWillChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(keyboardDidChangeFrameNotification:)
+                                                name:UIKeyboardDidChangeFrameNotification object:nil];
 }
 
 - (void)unregisterNotifications {

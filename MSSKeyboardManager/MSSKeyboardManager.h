@@ -36,6 +36,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign, readonly) BOOL isLocal;
 
+/**
+ Whether the keyboard will be visible due to the update.
+ */
+@property (nonatomic, assign, readonly) BOOL keyboardVisible;
+/**
+ Whether the keyboard is docked during the update (iPad only)
+ */
+@property (nonatomic, assign, readonly) BOOL keyboardDocked;
+
 + (instancetype)updateWithDictionary:(NSDictionary *)updateDictionary;
 
 @end
@@ -52,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param update
  The keyboard update
  */
-- (void)keyboardManager:(MSSKeyboardManager *)delegate willShowKeyboardWithUpdate:(MSSKeyboardUpdate *)update;
+- (void)keyboardManager:(MSSKeyboardManager *)manager willShowKeyboardWithUpdate:(MSSKeyboardUpdate *)update;
 /**
  The keyboard did show.
  
@@ -62,7 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param update
  The keyboard update
  */
-- (void)keyboardManager:(MSSKeyboardManager *)delegate didShowKeyboardWithUpdate:(MSSKeyboardUpdate *)update;
+- (void)keyboardManager:(MSSKeyboardManager *)manager didShowKeyboardWithUpdate:(MSSKeyboardUpdate *)update;
 /**
  The keyboard will hide.
  
@@ -72,7 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param update
  The keyboard update
  */
-- (void)keyboardManager:(MSSKeyboardManager *)delegate willHideKeyboardWithUpdate:(MSSKeyboardUpdate *)update;
+- (void)keyboardManager:(MSSKeyboardManager *)manager willHideKeyboardWithUpdate:(MSSKeyboardUpdate *)update;
 /**
  The keyboard did hide.
  
@@ -82,7 +91,33 @@ NS_ASSUME_NONNULL_BEGIN
  @param update
  The keyboard update
  */
-- (void)keyboardManager:(MSSKeyboardManager *)delegate didHideKeyboardWithUpdate:(MSSKeyboardUpdate *)update;
+- (void)keyboardManager:(MSSKeyboardManager *)manager didHideKeyboardWithUpdate:(MSSKeyboardUpdate *)update;
+/**
+ The keyboard will update from its current frame.
+ 
+ @param manager
+ The keyboard manager.
+ 
+ @param frame
+ The keyboard current frame.
+ 
+ @param docked
+ Whether the keyboard is docked.
+ */
+- (void)keyboardManager:(MSSKeyboardManager *)manager keyboardWillUpdateFromFrame:(CGRect)frame isDocked:(BOOL)docked;
+/**
+ The keyboard did update to a new frame.
+ 
+ @param manager
+ The keyboard manager.
+ 
+ @param frame
+ The new keyboard frame.
+ 
+ @param docked
+ Whether the keyboard is docked.
+ */
+- (void)keyboardManager:(MSSKeyboardManager *)manager keyboardDidUpdateToFrame:(CGRect)frame isDocked:(BOOL)docked;
 
 @end
 

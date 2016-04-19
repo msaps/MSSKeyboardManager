@@ -47,4 +47,13 @@
     
 }
 
+- (void)keyboardManager:(MSSKeyboardManager *)delegate keyboardWillUpdateFromFrame:(CGRect)frame isDocked:(BOOL)docked {
+    NSLog(@"keyboardWillUpdateFromFrame %@ Docked: %@", NSStringFromCGRect(frame), docked ? @"YES" : @"NO");
+}
+
+- (void)keyboardManager:(MSSKeyboardManager *)delegate keyboardDidUpdateToFrame:(CGRect)frame isDocked:(BOOL)docked {
+    NSLog(@"keyboardDidUpdateToFrame %@ Docked: %@", NSStringFromCGRect(frame), docked ? @"YES" : @"NO");
+
+}
+
 @end
