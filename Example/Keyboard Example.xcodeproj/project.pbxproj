@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46C64DFE1CC6219400FB223B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C64DFD1CC6219400FB223B /* main.m */; };
+		46C64E071CC6219400FB223B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46C64E051CC6219400FB223B /* Main.storyboard */; };
+		46C64E0C1CC6219400FB223B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46C64E0A1CC6219400FB223B /* LaunchScreen.storyboard */; };
+		46C64E181CC621E900FB223B /* MSSKeyboardDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C64E151CC621E900FB223B /* MSSKeyboardDelegate.m */; };
+		46C64E191CC621E900FB223B /* UIView+MSSKeyboardDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C64E171CC621E900FB223B /* UIView+MSSKeyboardDismiss.m */; };
+		46C64E241CC6230100FB223B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46C64E1C1CC6230100FB223B /* Assets.xcassets */; };
+		46C64E251CC6230100FB223B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C64E1F1CC6230100FB223B /* AppDelegate.m */; };
+		46C64E261CC6230100FB223B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C64E231CC6230100FB223B /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		46C64DF91CC6219400FB223B /* Keyboard Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keyboard Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46C64DFD1CC6219400FB223B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		46C64E061CC6219400FB223B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		46C64E0B1CC6219400FB223B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		46C64E0D1CC6219400FB223B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		46C64E141CC621E900FB223B /* MSSKeyboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSKeyboardDelegate.h; sourceTree = "<group>"; };
+		46C64E151CC621E900FB223B /* MSSKeyboardDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSKeyboardDelegate.m; sourceTree = "<group>"; };
+		46C64E161CC621E900FB223B /* UIView+MSSKeyboardDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MSSKeyboardDismiss.h"; sourceTree = "<group>"; };
+		46C64E171CC621E900FB223B /* UIView+MSSKeyboardDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MSSKeyboardDismiss.m"; sourceTree = "<group>"; };
+		46C64E1A1CC6229100FB223B /* MSSKeyboardManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSKeyboardManager.h; sourceTree = "<group>"; };
+		46C64E1C1CC6230100FB223B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46C64E1E1CC6230100FB223B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		46C64E1F1CC6230100FB223B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		46C64E221CC6230100FB223B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		46C64E231CC6230100FB223B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46C64DF61CC6219400FB223B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46C64DF01CC6219400FB223B = {
+			isa = PBXGroup;
+			children = (
+				46C64DFB1CC6219400FB223B /* Keyboard Example */,
+				46C64E131CC621E900FB223B /* MSSKeyboardManager */,
+				46C64DFA1CC6219400FB223B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46C64DFA1CC6219400FB223B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46C64DF91CC6219400FB223B /* Keyboard Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46C64DFB1CC6219400FB223B /* Keyboard Example */ = {
+			isa = PBXGroup;
+			children = (
+				46C64E1D1CC6230100FB223B /* Source */,
+				46C64E1B1CC6230100FB223B /* Resources */,
+				46C64DFC1CC6219400FB223B /* Supporting Files */,
+			);
+			path = "Keyboard Example";
+			sourceTree = "<group>";
+		};
+		46C64DFC1CC6219400FB223B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46C64DFD1CC6219400FB223B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46C64E131CC621E900FB223B /* MSSKeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				46C64E1A1CC6229100FB223B /* MSSKeyboardManager.h */,
+				46C64E141CC621E900FB223B /* MSSKeyboardDelegate.h */,
+				46C64E151CC621E900FB223B /* MSSKeyboardDelegate.m */,
+				46C64E161CC621E900FB223B /* UIView+MSSKeyboardDismiss.h */,
+				46C64E171CC621E900FB223B /* UIView+MSSKeyboardDismiss.m */,
+			);
+			name = MSSKeyboardManager;
+			path = ../MSSKeyboardManager;
+			sourceTree = "<group>";
+		};
+		46C64E1B1CC6230100FB223B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				46C64E0A1CC6219400FB223B /* LaunchScreen.storyboard */,
+				46C64E1C1CC6230100FB223B /* Assets.xcassets */,
+				46C64E0D1CC6219400FB223B /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		46C64E1D1CC6230100FB223B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				46C64E1E1CC6230100FB223B /* AppDelegate.h */,
+				46C64E1F1CC6230100FB223B /* AppDelegate.m */,
+				46C64E201CC6230100FB223B /* UI */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		46C64E201CC6230100FB223B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				46C64E211CC6230100FB223B /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		46C64E211CC6230100FB223B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				46C64E051CC6219400FB223B /* Main.storyboard */,
+				46C64E221CC6230100FB223B /* ViewController.h */,
+				46C64E231CC6230100FB223B /* ViewController.m */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46C64DF81CC6219400FB223B /* Keyboard Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46C64E101CC6219400FB223B /* Build configuration list for PBXNativeTarget "Keyboard Example" */;
+			buildPhases = (
+				46C64DF51CC6219400FB223B /* Sources */,
+				46C64DF61CC6219400FB223B /* Frameworks */,
+				46C64DF71CC6219400FB223B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Keyboard Example";
+			productName = "Keyboard Example";
+			productReference = 46C64DF91CC6219400FB223B /* Keyboard Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46C64DF11CC6219400FB223B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Merrick Sapsford";
+				TargetAttributes = {
+					46C64DF81CC6219400FB223B = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 46C64DF41CC6219400FB223B /* Build configuration list for PBXProject "Keyboard Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46C64DF01CC6219400FB223B;
+			productRefGroup = 46C64DFA1CC6219400FB223B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46C64DF81CC6219400FB223B /* Keyboard Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46C64DF71CC6219400FB223B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46C64E0C1CC6219400FB223B /* LaunchScreen.storyboard in Resources */,
+				46C64E241CC6230100FB223B /* Assets.xcassets in Resources */,
+				46C64E071CC6219400FB223B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46C64DF51CC6219400FB223B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46C64E251CC6230100FB223B /* AppDelegate.m in Sources */,
+				46C64DFE1CC6219400FB223B /* main.m in Sources */,
+				46C64E191CC621E900FB223B /* UIView+MSSKeyboardDismiss.m in Sources */,
+				46C64E181CC621E900FB223B /* MSSKeyboardDelegate.m in Sources */,
+				46C64E261CC6230100FB223B /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		46C64E051CC6219400FB223B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46C64E061CC6219400FB223B /* Base */,
+			);
+			name = Main.storyboard;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		46C64E0A1CC6219400FB223B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46C64E0B1CC6219400FB223B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46C64E0E1CC6219400FB223B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		46C64E0F1CC6219400FB223B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46C64E111CC6219400FB223B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Keyboard Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msapsford.Keyboard-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		46C64E121CC6219400FB223B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Keyboard Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msapsford.Keyboard-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46C64DF41CC6219400FB223B /* Build configuration list for PBXProject "Keyboard Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46C64E0E1CC6219400FB223B /* Debug */,
+				46C64E0F1CC6219400FB223B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46C64E101CC6219400FB223B /* Build configuration list for PBXNativeTarget "Keyboard Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46C64E111CC6219400FB223B /* Debug */,
+				46C64E121CC6219400FB223B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46C64DF11CC6219400FB223B /* Project object */;
+}
