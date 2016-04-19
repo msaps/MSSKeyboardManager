@@ -1,5 +1,5 @@
 # MSSKeyboardManager
-[![Build Status](https://travis-ci.org/MerrickSapsford/MSSKeyboardManager.svg?branch=master)](https://travis-ci.org/MerrickSapsford/MSSKeyboardManager)
+[![Build Status](https://travis-ci.org/MerrickSapsford/MSSKeyboardManager.svg?branch=develop)](https://travis-ci.org/MerrickSapsford/MSSKeyboardManager)
 [![CocoaPods](https://img.shields.io/cocoapods/v/MSSKeyboardManager.svg)]()
 
 MSSKeyboardManager is a utility class that provides enhanced delegation for keyboard updates, and a keyboard dismissal component for UIView.
