@@ -19,7 +19,10 @@
         _endFrame = [[dictionary objectForKey:UIKeyboardFrameEndUserInfoKey]CGRectValue];
         _animationDuration = [[dictionary objectForKey:UIKeyboardAnimationDurationUserInfoKey]floatValue];
         _animationCurve = [[dictionary objectForKey:UIKeyboardAnimationCurveUserInfoKey]unsignedIntegerValue];
-        _isLocal = [[dictionary objectForKey:UIKeyboardIsLocalUserInfoKey]boolValue];
+        
+        if (&UIKeyboardIsLocalUserInfoKey) {
+            _isLocal = [[dictionary objectForKey:UIKeyboardIsLocalUserInfoKey]boolValue];
+        }
         
         UIInterfaceOrientation currentOrientation = [UIApplication sharedApplication].statusBarOrientation;
         CGSize screenSize = [UIScreen mainScreen].bounds.size;

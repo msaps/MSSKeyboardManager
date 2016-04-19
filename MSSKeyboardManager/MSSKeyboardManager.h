@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Whether the update was summoned by the local app in split view.
  */
-@property (nonatomic, assign, readonly) BOOL isLocal;
+@property (nonatomic, assign, readonly) BOOL isLocal NS_AVAILABLE_IOS(9_0);
 
 /**
  Whether the keyboard will be visible due to the update.
