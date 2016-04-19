@@ -1,11 +1,11 @@
 //
-//  MSSKeyboardDelegate.m
+//  MSSKeyboardManager.m
 //
 //  Created by Merrick Sapsford on 07/04/2016.
 //  Copyright © 2016 Merrick Sapsford. All rights reserved.
 //
 
-#import "MSSKeyboardDelegate.H"
+#import "MSSKeyboardManager.h"
 
 @implementation MSSKeyboardUpdate
 
@@ -26,15 +26,15 @@
 
 @end
 
-@implementation MSSKeyboardDelegate
+@implementation MSSKeyboardManager
 
 #pragma mark - Init
 
-+ (instancetype)keyboardDelegateForResponder:(id<MSSKeyboardDelegate>)responder {
++ (instancetype)keyboardManagerForResponder:(id<MSSKeyboardManagerDelegate>)responder {
     return [[[self class]alloc]initWithResponder:responder];
 }
 
-- (instancetype)initWithResponder:(id<MSSKeyboardDelegate>)responder {
+- (instancetype)initWithResponder:(id<MSSKeyboardManagerDelegate>)responder {
     if (self = [super init]) {
         _responder = responder;
         [self registerNotifications];
@@ -51,30 +51,30 @@
 #pragma mark - Notifications
 
 - (void)keyboardWillShowNotification:(NSNotification *)notification {
-    if ([self.responder respondsToSelector:@selector(keyboardDelegate:willShowKeyboardWithUpdate:)]) {
+    if ([self.responder respondsToSelector:@selector(keyboardManager:willShowKeyboardWithUpdate:)]) {
         MSSKeyboardUpdate *update = [MSSKeyboardUpdate updateWithDictionary:notification.userInfo];
-        [self.responder keyboardDelegate:self willShowKeyboardWithUpdate:update];
+        [self.responder keyboardManager:self willShowKeyboardWithUpdate:update];
     }
 }
 
 - (void)keyboardDidShowNotification:(NSNotification *)notification {
-    if ([self.responder respondsToSelector:@selector(keyboardDelegate:didShowKeyboardWithUpdate:)]) {
+    if ([self.responder respondsToSelector:@selector(keyboardManager:didShowKeyboardWithUpdate:)]) {
         MSSKeyboardUpdate *update = [MSSKeyboardUpdate updateWithDictionary:notification.userInfo];
-        [self.responder keyboardDelegate:self didShowKeyboardWithUpdate:update];
+        [self.responder keyboardManager:self didShowKeyboardWithUpdate:update];
     }
 }
 
 - (void)keyboardWillHideNotification:(NSNotification *)notification {
-    if ([self.responder respondsToSelector:@selector(keyboardDelegate:willHideKeyboardWithUpdate:)]) {
+    if ([self.responder respondsToSelector:@selector(keyboardManager:willHideKeyboardWithUpdate:)]) {
         MSSKeyboardUpdate *update = [MSSKeyboardUpdate updateWithDictionary:notification.userInfo];
-        [self.responder keyboardDelegate:self willHideKeyboardWithUpdate:update];
+        [self.responder keyboardManager:self willHideKeyboardWithUpdate:update];
     }
 }
 
 - (void)keyboardDidHideNotification:(NSNotification *)notification {
-    if ([self.responder respondsToSelector:@selector(keyboardDelegate:didHideKeyboardWithUpdate:)]) {
+    if ([self.responder respondsToSelector:@selector(keyboardManager:didHideKeyboardWithUpdate:)]) {
         MSSKeyboardUpdate *update = [MSSKeyboardUpdate updateWithDictionary:notification.userInfo];
-        [self.responder keyboardDelegate:self didHideKeyboardWithUpdate:update];
+        [self.responder keyboardManager:self didHideKeyboardWithUpdate:update];
     }
 }
 

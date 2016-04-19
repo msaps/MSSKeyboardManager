@@ -8,20 +8,43 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <MSSKeyboardManagerDelegate>
+
+@property (nonatomic, strong) MSSKeyboardManager *keyboardManager;
+
+@property (nonatomic, weak) IBOutlet UITextField *textField;
 
 @end
 
 @implementation ViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.keyboardManager = [MSSKeyboardManager keyboardManagerForResponder:self];
+    [self.view becomeKeyboardDismissalResponder];
+    
+    [self.textField becomeFirstResponder];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - MSSKeyboardManagerDelegate
+
+- (void)keyboardManager:(MSSKeyboardManager *)delegate willShowKeyboardWithUpdate:(MSSKeyboardUpdate *)update {
+    
+}
+
+- (void)keyboardManager:(MSSKeyboardManager *)delegate didShowKeyboardWithUpdate:(MSSKeyboardUpdate *)update {
+    
+}
+
+- (void)keyboardManager:(MSSKeyboardManager *)delegate willHideKeyboardWithUpdate:(MSSKeyboardUpdate *)update {
+    
+}
+
+- (void)keyboardManager:(MSSKeyboardManager *)delegate didHideKeyboardWithUpdate:(MSSKeyboardUpdate *)update {
+    
 }
 
 @end
