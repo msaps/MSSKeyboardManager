@@ -16,17 +16,12 @@ To use `MSSKeyboardManager`, initialise the object with a responder that impleme
 The following protocol methods are then available to the responder:
 
 ```
-- (void)keyboardManager:(MSSKeyboardManager *)manager willShowKeyboardWithUpdate:(MSSKeyboardUpdate *)update;
-
-- (void)keyboardManager:(MSSKeyboardManager *)manager didShowKeyboardWithUpdate:(MSSKeyboardUpdate *)update;
-
-- (void)keyboardManager:(MSSKeyboardManager *)manager willHideKeyboardWithUpdate:(MSSKeyboardUpdate *)update;
-
-- (void)keyboardManager:(MSSKeyboardManager *)manager didHideKeyboardWithUpdate:(MSSKeyboardUpdate *)update;
-
-- (void)keyboardManager:(MSSKeyboardManager *)manager keyboardWillUpdateFromFrame:(CGRect)frame isDocked:(BOOL)docked;
-
-- (void)keyboardManager:(MSSKeyboardManager *)manager keyboardDidUpdateToFrame:(CGRect)frame isDocked:(BOOL)docked;
+- (void)keyboardManager:willShowKeyboardWithUpdate:
+- (void)keyboardManager:didShowKeyboardWithUpdate:
+- (void)keyboardManager:willHideKeyboardWithUpdate:
+- (void)keyboardManager:didHideKeyboardWithUpdate:
+- (void)keyboardManager:keyboardWillUpdateFromFrame:isDocked:
+- (void)keyboardManager:keyboardDidUpdateToFrame:isDocked:
 ```
 
 The `MSSKeyboardUpdate` object contains all the releavent information for the active update:
