@@ -78,6 +78,22 @@
     }
 }
 
+#pragma mark - Public
+
+- (void)startIgnoringUpdates {
+    if (!_ignoringUpdates) {
+        _ignoringUpdates = YES;
+        [self unregisterNotifications];
+    }
+}
+
+- (void)stopIgnoringUpdates {
+    if (_ignoringUpdates) {
+        _ignoringUpdates = NO;
+        [self registerNotifications];
+    }
+}
+
 #pragma mark - Internal
 
 - (void)registerNotifications {

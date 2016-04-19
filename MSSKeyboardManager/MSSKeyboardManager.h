@@ -88,9 +88,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MSSKeyboardManager : NSObject
 
+/**
+ The object that responds to keyboard updates.
+ */
 @property (nonatomic, weak, readonly) id<MSSKeyboardManagerDelegate> responder;
 
+/**
+ Whether the keyboard manager is currently ignoring keyboard updates.
+ */
+@property (nonatomic, assign, readonly, getter=isIgnoringUpdates) BOOL ignoringUpdates;
+
 + (instancetype)keyboardManagerForResponder:(id<MSSKeyboardManagerDelegate>)responder;
+
+/**
+ Start ignoring any keyboard updates and stop updating responder.
+ */
+- (void)startIgnoringUpdates;
+/**
+ Resume listening to keyboard updates and updating responder.
+ */
+- (void)stopIgnoringUpdates;
 
 @end
 NS_ASSUME_NONNULL_END
