@@ -7,13 +7,26 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^MSSKeyboardDismissCompetion)(BOOL resigned);
+
 IB_DESIGNABLE
 @interface UIView (MSSKeyboardDismiss) <UIGestureRecognizerDelegate>
 
+/**
+ Whether the view can dismiss keyboard on tap.
+ */
 @property (nonatomic, assign) IBInspectable BOOL canDismissKeyboard;
 
+/**
+ Become the responder for dismissing the keyboard on tap.
+ */
 - (void)becomeKeyboardDismissalResponder;
-
-- (void)resignFirstResponderWithCompletion:(void (^) (BOOL resigned))completion;
+/**
+ Resign the active first responder with completion.
+ 
+ @param completion
+ The completion block.
+ */
+- (void)resignFirstResponderWithCompletion:(MSSKeyboardDismissCompetion)completion;
 
 @end

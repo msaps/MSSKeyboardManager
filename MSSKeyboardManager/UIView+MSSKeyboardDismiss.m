@@ -76,7 +76,7 @@ static CGFloat _keyboardAnimationDuration;
     return [value boolValue];
 }
 
-- (void)resignFirstResponderWithCompletion:(void (^)(BOOL))completion {
+- (void)resignFirstResponderWithCompletion:(MSSKeyboardDismissCompetion)completion {
     BOOL resigned = [self resignFirstResponder];
     
     if (completion) {
