@@ -5,7 +5,7 @@
 MSSKeyboardManager is a utility class that provides enhanced delegation for keyboard updates, and a keyboard dismissal component for UIView.
 
 ## Installation
-MSSTabbedPageViewController is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+MSSKeyboardManager is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
     pod "MSSKeyboardManager"
     
