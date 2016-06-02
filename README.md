@@ -65,4 +65,7 @@ Supports iOS 8 and above.
 ## Author
 Merrick Sapsford
 
+## TODO
+- Swift support
+
 Mail: [merrick@sapsford.tech](mailto:merrick@sapsford.tech)
