@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MSSKeyboardManager"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "Utility for managing and assisting with iOS keyboard updates."
 
   s.description  = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/MerrickSapsford/MSSKeyboardManager.git", :tag => s.version.to_s }
   s.requires_arc = true
-  s.source_files  = "MSSKeyboardManager/Classes", "MSSKeyboardManager/**/*.{h,m}"
+  s.source_files  = "MSSKeyboardManager/Classes", "Source/**/*.{h,m}"
   s.frameworks = 'UIKit'
 
 end
