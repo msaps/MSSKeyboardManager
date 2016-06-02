@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46B7EEBC1D00CCB0007368E8 /* MSSKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B7EEB91D00CCB0007368E8 /* MSSKeyboardManager.m */; };
+		46B7EEBD1D00CCB0007368E8 /* UIView+MSSKeyboardDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B7EEBB1D00CCB0007368E8 /* UIView+MSSKeyboardDismiss.m */; };
 		46C64DFE1CC6219400FB223B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C64DFD1CC6219400FB223B /* main.m */; };
 		46C64E071CC6219400FB223B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46C64E051CC6219400FB223B /* Main.storyboard */; };
 		46C64E0C1CC6219400FB223B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46C64E0A1CC6219400FB223B /* LaunchScreen.storyboard */; };
-		46C64E191CC621E900FB223B /* UIView+MSSKeyboardDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C64E171CC621E900FB223B /* UIView+MSSKeyboardDismiss.m */; };
 		46C64E241CC6230100FB223B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46C64E1C1CC6230100FB223B /* Assets.xcassets */; };
 		46C64E251CC6230100FB223B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C64E1F1CC6230100FB223B /* AppDelegate.m */; };
 		46C64E261CC6230100FB223B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C64E231CC6230100FB223B /* ViewController.m */; };
-		46C64E291CC6242B00FB223B /* MSSKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C64E281CC6242B00FB223B /* MSSKeyboardManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46B7EEB81D00CCB0007368E8 /* MSSKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSKeyboardManager.h; sourceTree = "<group>"; };
+		46B7EEB91D00CCB0007368E8 /* MSSKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSKeyboardManager.m; sourceTree = "<group>"; };
+		46B7EEBA1D00CCB0007368E8 /* UIView+MSSKeyboardDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MSSKeyboardDismiss.h"; sourceTree = "<group>"; };
+		46B7EEBB1D00CCB0007368E8 /* UIView+MSSKeyboardDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MSSKeyboardDismiss.m"; sourceTree = "<group>"; };
 		46C64DF91CC6219400FB223B /* Keyboard Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keyboard Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C64DFD1CC6219400FB223B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		46C64E061CC6219400FB223B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46C64E0B1CC6219400FB223B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46C64E0D1CC6219400FB223B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
-		46C64E161CC621E900FB223B /* UIView+MSSKeyboardDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MSSKeyboardDismiss.h"; sourceTree = "<group>"; };
-		46C64E171CC621E900FB223B /* UIView+MSSKeyboardDismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MSSKeyboardDismiss.m"; sourceTree = "<group>"; };
 		46C64E1C1CC6230100FB223B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46C64E1E1CC6230100FB223B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46C64E1F1CC6230100FB223B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		46C64E221CC6230100FB223B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		46C64E231CC6230100FB223B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		46C64E271CC6242B00FB223B /* MSSKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSKeyboardManager.h; sourceTree = "<group>"; };
-		46C64E281CC6242B00FB223B /* MSSKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSKeyboardManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,11 +45,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46B7EEB71D00CCB0007368E8 /* MSSKeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				46B7EEB81D00CCB0007368E8 /* MSSKeyboardManager.h */,
+				46B7EEB91D00CCB0007368E8 /* MSSKeyboardManager.m */,
+				46B7EEBA1D00CCB0007368E8 /* UIView+MSSKeyboardDismiss.h */,
+				46B7EEBB1D00CCB0007368E8 /* UIView+MSSKeyboardDismiss.m */,
+			);
+			name = MSSKeyboardManager;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
 		46C64DF01CC6219400FB223B = {
 			isa = PBXGroup;
 			children = (
 				46C64DFB1CC6219400FB223B /* Keyboard Example */,
-				46C64E131CC621E900FB223B /* MSSKeyboardManager */,
+				46B7EEB71D00CCB0007368E8 /* MSSKeyboardManager */,
 				46C64DFA1CC6219400FB223B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,18 +90,6 @@
 				46C64DFD1CC6219400FB223B /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		46C64E131CC621E900FB223B /* MSSKeyboardManager */ = {
-			isa = PBXGroup;
-			children = (
-				46C64E271CC6242B00FB223B /* MSSKeyboardManager.h */,
-				46C64E281CC6242B00FB223B /* MSSKeyboardManager.m */,
-				46C64E161CC621E900FB223B /* UIView+MSSKeyboardDismiss.h */,
-				46C64E171CC621E900FB223B /* UIView+MSSKeyboardDismiss.m */,
-			);
-			name = MSSKeyboardManager;
-			path = ../MSSKeyboardManager;
 			sourceTree = "<group>";
 		};
 		46C64E1B1CC6230100FB223B /* Resources */ = {
@@ -202,8 +202,8 @@
 			files = (
 				46C64E251CC6230100FB223B /* AppDelegate.m in Sources */,
 				46C64DFE1CC6219400FB223B /* main.m in Sources */,
-				46C64E191CC621E900FB223B /* UIView+MSSKeyboardDismiss.m in Sources */,
-				46C64E291CC6242B00FB223B /* MSSKeyboardManager.m in Sources */,
+				46B7EEBC1D00CCB0007368E8 /* MSSKeyboardManager.m in Sources */,
+				46B7EEBD1D00CCB0007368E8 /* UIView+MSSKeyboardDismiss.m in Sources */,
 				46C64E261CC6230100FB223B /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
