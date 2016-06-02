@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/MerrickSapsford/MSSKeyboardManager/blob/develop/Resource/MSSKeyboardManager.png?raw=true" alt="MSSKeyboardManager" height="160" width="160"/>
+</p>
+
 # MSSKeyboardManager
 [![Build Status](https://travis-ci.org/MerrickSapsford/MSSKeyboardManager.svg?branch=develop)](https://travis-ci.org/MerrickSapsford/MSSKeyboardManager)
 [![CocoaPods](https://img.shields.io/cocoapods/v/MSSKeyboardManager.svg)]()
