@@ -11,7 +11,7 @@ MSSKeyboardManager is a utility class that provides enhanced delegation for keyb
 ## Installation
 MSSKeyboardManager is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
-    pod MSSKeyboardManager
+    pod 'MSSKeyboardManager'
     
 ## Usage
 To run the example project, clone the repo. Use `pod install` in your project.
